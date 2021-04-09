@@ -1,6 +1,77 @@
 @tailwind base;
 
 /* Write your own custom base styles here */
+.hand {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 10px;
+}
+.keyboard {
+  grid-gap: 5px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, 4.5em);
+  align-items: stretch;
+  justify-items: stretch;
+}
+.keyboard div:nth-child(49) {
+  grid-column: 2;
+}
+
+.keyboard div:nth-child(53) {
+  grid-column: 8;
+}
+
+.top-row {
+  /* height: 4.5em; */
+  width: 100%;
+  grid-gap: 3px;
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  /* grid-template-rows: 3em; */
+  align-items: stretch;
+  justify-items: stretch;
+}
+
+.thumb {
+  grid-gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 4.5em);
+  align-items: stretch;
+  justify-items: stretch;
+}
+
+.thumb div:nth-child(1) {
+  grid-column: 2;
+}
+.thumb div:nth-child(5) {
+  grid-row: 2 / span 2;
+}
+.thumb div:nth-child(6) {
+  grid-row: 2 / span 2;
+}
+.thumb div:nth-child(7) {
+  grid-row: 2;
+}
+.thumb div:nth-child(8) {
+  grid-row: 2;
+}
+.thumb div:nth-child(9) {
+  grid-row: 2 / span 2;
+}
+.thumb div:nth-child(10) {
+  grid-row: 2 / span 2;
+}
+.thumb div:nth-child(11) {
+  grid-row: 3;
+}
+.thumb div:nth-child(12) {
+  grid-row: 3;
+}
 
 /* Start purging... */
 @tailwind components;
