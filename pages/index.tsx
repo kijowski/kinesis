@@ -97,8 +97,8 @@ const Faq = () => (
         </p>
         <p className="mt-2">
           <p className="text-base leading-6 text-gray-500">
-            This website is a simple tool to help Kinesis Advantage 2 owners
-            with visualisation of their remap files.
+            This website is a simple tool to help Kinesis Advantage2 owners with
+            visualisation of their remap files.
           </p>
         </p>
       </li>
@@ -108,16 +108,16 @@ const Faq = () => (
         </p>
         <p className="mt-2">
           <p className="text-base leading-6 text-gray-500">
-            Just write your remap file into the text input field. The tool will
-            show updated keybindings and list out all of the macros that it
-            could parse. You can toggle between layers with button in lower
-            right corner.
+            You can write your key remaps and macros into the input file
+            textarea. The tool will show updated keybindings and list out all of
+            the macros that it could parse. You can toggle between layers with
+            button in lower right corner.
           </p>
         </p>
       </li>
       <li className="">
         <p className="text-lg font-medium leading-6 text-gray-900">
-          Where can I learn more about remapping keys on Advantage 2?
+          Where can I learn more about remapping keys on Advantage2?
         </p>
         <p className="mt-2">
           <p className="text-base leading-6 text-gray-500">
@@ -127,7 +127,7 @@ const Faq = () => (
             >
               Official manual
             </a>{" "}
-            is a best place to start. You will learn how to create a different
+            is the best place to start. You will learn how to create a different
             kinds of key remaps and how load your mapping file onto the keyboard
             itself.
           </p>
@@ -169,11 +169,11 @@ const Index = () => {
     <>
       <Layout>
         <Head>
-          <title>Kinesis Advantage 2 remapping helper</title>
+          <title>Kinesis Advantage2 remapping helper</title>
         </Head>
         <Container>
           <h1 className="text-5xl text-center font-bold">
-            Kinesis Advantage 2 remapping helper
+            Kinesis Advantage2 remapping helper
           </h1>
           <FullKeyboard remaps={mapping} />
           <div className="grid grid-cols-3 gap-10 items-stretch justify-items-stretch w-full min-h-full">

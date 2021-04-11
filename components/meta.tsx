@@ -32,7 +32,7 @@ const Meta = () => {
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#fff" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta name="description" content="Kinesis Advantage 2 remapping helper" />
+      <meta name="description" content="Kinesis Advantage2 remapping helper" />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>
   );
