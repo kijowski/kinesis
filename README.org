@@ -1,0 +1,23 @@
+* Kinesis Advantage2 remapping helper
+** What is it?
+This website is a simple tool to help Kinesis Advantage2 owners with visualization of their remap files.
+** How to use?
+You can write your key remaps and macros into the input file textarea. The tool will show updated keybindings and list out all of the macros that it could parse. You can toggle between layers with button in lower right corner.
+** How to extend?
+This tool is a simple React application bootstrapped with [[https://nextjs.org/][Next.js]].
+*** Setup
+To start development you need to clone the repository
+#+begin_src bash
+git clone git@github.com:kijowski/kinesis.git
+#+end_src
+And then execute following commands
+#+begin_src bash
+npm install
+npm run dev
+#+end_src
+This will start the development server with live reload enabled.
+*** Where to start?
+- =lib= folder contains files related to Advantage2 keyboard layout and remapping parser
+- =pages/index.tsx= is the main file with React components responsible for displaying the keyboard
+** License
+MIT
