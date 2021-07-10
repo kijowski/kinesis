@@ -192,6 +192,10 @@ const actionTokens = [
   ...hidKeycodes.map(({ code }) => code),
 ].map((x) => x.toLowerCase());
 
+const modifierTokens = Object.entries(keyMetadata)
+  .filter((x) => x[1].apperance === "modifier")
+  .map((x) => x[0]);
+
 const file = `[kp-rctrl]>[z]
 [caps]>[kptoggle]
 [g]>[a][t&h30][lwin]
@@ -202,6 +206,8 @@ const file = `[kp-rctrl]>[z]
 *multikey macro
 {rctrl}{s}>{g}{o}{a}{l}
 {rctrl}{lshift}{s}>{g}{o}{a}{l}
+*multikey macro with modifer not being location token
+{lwin}{pup}>{g}{o}{a}{l}
 *delay (can be 125ms or 500ms)
 {hyphen}>{f1}{d125}{d500}{mute}
 *shifted actions
@@ -317,12 +323,18 @@ export function parseMapping(input: string) {
         .replace(/\{/g, " ")
         .split(" ")
         .filter((x) => x.trim() !== "");
-      if (
-        fromTokens.some((from) => !realTokens.find((token) => token === from))
-      ) {
+      const modifiers = fromTokens.filter((fr) =>
+        modifierTokens.find((token) => token === fr)
+      );
+      const locationToken = fromTokens.filter(
+        (fr) =>
+          realTokens.some((token) => token === fr) &&
+          !modifiers.some((token) => token === fr)
+      );
+      if (locationToken.length !== 1) {
         errors.push({
           line: idx + 1,
-          message: `Invalid location token ${from}`,
+          message: `There should be exactly one non-modifier location token in macro form ${from} but there are ${locationToken.length}`,
         });
       } else {
         const macro = {
