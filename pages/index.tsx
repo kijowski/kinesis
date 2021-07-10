@@ -95,58 +95,50 @@ const Faq = () => (
         <p className="text-lg font-medium leading-6 text-gray-900">
           What is it?
         </p>
-        <p className="mt-2">
-          <p className="text-base leading-6 text-gray-500">
-            This website is a simple tool to help Kinesis Advantage2 owners with
-            visualisation of their remap files.
-          </p>
+        <p className="mt-2 text-base leading-6 text-gray-500">
+          This website is a simple tool to help Kinesis Advantage2 owners with
+          visualisation of their remap files.
         </p>
       </li>
       <li className="">
         <p className="text-lg font-medium leading-6 text-gray-900">
           How to use it?
         </p>
-        <p className="mt-2">
-          <p className="text-base leading-6 text-gray-500">
-            You can write your key remaps and macros into the input file
-            textarea. The tool will show updated keybindings and list out all of
-            the macros that it could parse. You can toggle between layers with
-            button in lower right corner.
-          </p>
+        <p className="mt-2 text-base leading-6 text-gray-500">
+          You can write your key remaps and macros into the input file textarea.
+          The tool will show updated keybindings and list out all of the macros
+          that it could parse. You can toggle between layers with button in
+          lower right corner.
         </p>
       </li>
       <li className="">
         <p className="text-lg font-medium leading-6 text-gray-900">
           Where can I learn more about remapping keys on Advantage2?
         </p>
-        <p className="mt-2">
-          <p className="text-base leading-6 text-gray-500">
-            <a
-              className="font-bold hover:underline"
-              href="https://kinesis-ergo.com/support/advantage2/"
-            >
-              Official manual
-            </a>{" "}
-            is the best place to start. You will learn how to create a different
-            kinds of key remaps and how load your mapping file onto the keyboard
-            itself.
-          </p>
+        <p className="mt-2 text-base leading-6 text-gray-500">
+          <a
+            className="font-bold hover:underline"
+            href="https://kinesis-ergo.com/support/advantage2/"
+          >
+            Official manual
+          </a>{" "}
+          is the best place to start. You will learn how to create a different
+          kinds of key remaps and how load your mapping file onto the keyboard
+          itself.
         </p>
       </li>
       <li className="">
         <p className="text-lg font-medium leading-6 text-gray-900">
           Is this an official tool?
         </p>
-        <p className="mt-2">
-          <p className="text-base leading-6 text-gray-500">
-            Absolutely not - this is just a quick tool that I've created to
-            scratch my own itch. I think that it's pretty useful, but couple
-            things are missing (like better macro validation). Contributions on{" "}
-            <a className="font-bold hover:underline" href={GITHUB_LINK}>
-              Github
-            </a>{" "}
-            are welcome.
-          </p>
+        <p className="mt-2 text-base leading-6 text-gray-500">
+          Absolutely not - this is just a quick tool that I've created to
+          scratch my own itch. I think that it's pretty useful, but couple
+          things are missing (like better macro validation). Contributions on{" "}
+          <a className="font-bold hover:underline" href={GITHUB_LINK}>
+            Github
+          </a>{" "}
+          are welcome.
         </p>
       </li>
     </ul>
