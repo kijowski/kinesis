@@ -187,6 +187,8 @@ export const keyMetadata = {
   kp0: { label: "Keypad 0", apperance: "normal" },
   "kp-end": { label: "End", apperance: "normal" },
   "kp-pdown": { label: "Page Down", apperance: "normal" },
+  "hyper": { label: "Hyper", apperance: "modifier" },
+  "meh": { label: "Meh", apperance: "modifier" },
 };
 
 export type KeyToken = keyof typeof keyMetadata;
