@@ -108,6 +108,7 @@ export const keyMetadata = {
   "kp-escape": { label: "Escape", apperance: "normal" },
   "kp-lwin": { label: "Left Super", apperance: "modifier" },
   "kp-ralt": { label: "Right Alt", apperance: "modifier" },
+  "kp-rwin": { label: "Right Super", apperance: "modifier" },
   menu: { label: "Menu / App", apperance: "normal" },
   play: { label: "Play / Pause", apperance: "normal" },
   prev: { label: "Previous Track", apperance: "normal" },
@@ -377,7 +378,7 @@ export const defaultKeymap: Keymap = {
     thumb: [
       "kp-lctrl",
       "kp-alt",
-      "kp-lwin",
+      "kp-rwin",
       "kp-rctrl",
       "kp-bspace",
       "kp-delete",
