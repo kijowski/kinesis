@@ -247,7 +247,7 @@ export function parseMapping(input: string) {
           line: idx + 1,
           message: `Invalid location token ${hold}`,
         });
-      } else if (delay <= 0 || delay > 99) {
+      } else if (delay <= 0 || delay > 999) {
         errors.push({ line: idx + 1, message: `Invalid hold delay ${delay}` });
       } else if (remaps[from as KeyToken] != null) {
         errors.push({
