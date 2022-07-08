@@ -27,7 +27,7 @@ export const keyMetadata = {
   shutdn: { label: "Shutdown", apperance: "normal" },
   null: { label: "No Key Action", apperance: "normal" },
   kptoggle: { label: "Toggle Keypad", apperance: "layer" },
-  kpshft: { label: "Shift Keypad", apperance: "layer" },
+  kpshift: { label: "Shift Keypad", apperance: "layer" },
   "kp=mac": { label: "Keypad = (MAC)", apperance: "normal" },
   escape: { label: "Escape", apperance: "normal" },
   f1: { label: "F1", apperance: "normal" },
@@ -108,6 +108,7 @@ export const keyMetadata = {
   "kp-escape": { label: "Escape", apperance: "normal" },
   "kp-lwin": { label: "Left Super", apperance: "modifier" },
   "kp-ralt": { label: "Right Alt", apperance: "modifier" },
+  "kp-rwin": { label: "Right Super", apperance: "modifier" },
   menu: { label: "Menu / App", apperance: "normal" },
   play: { label: "Play / Pause", apperance: "normal" },
   prev: { label: "Previous Track", apperance: "normal" },
@@ -187,6 +188,8 @@ export const keyMetadata = {
   kp0: { label: "Keypad 0", apperance: "normal" },
   "kp-end": { label: "End", apperance: "normal" },
   "kp-pdown": { label: "Page Down", apperance: "normal" },
+  "hyper": { label: "Hyper", apperance: "modifier" },
+  "meh": { label: "Meh", apperance: "modifier" },
 };
 
 export type KeyToken = keyof typeof keyMetadata;
@@ -303,7 +306,7 @@ export const defaultKeymap: Keymap = {
       "prev",
       "next",
       "calc",
-      "kpshft",
+      "kpshift",
       "kp-f9",
       "kp-f10",
       "kp-f11",
@@ -375,7 +378,7 @@ export const defaultKeymap: Keymap = {
     thumb: [
       "kp-lctrl",
       "kp-alt",
-      "kp-lwin",
+      "kp-rwin",
       "kp-rctrl",
       "kp-bspace",
       "kp-delete",
