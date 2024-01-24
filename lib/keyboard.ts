@@ -190,6 +190,9 @@ export const keyMetadata = {
   "kp-pdown": { label: "Page Down", apperance: "normal" },
   "hyper": { label: "Hyper", apperance: "modifier" },
   "meh": { label: "Meh", apperance: "modifier" },
+  "lmouse": { label: "Left mouse", apperance: "normal" },
+  "rmouse": { label: "Right mouse", apperance: "normal" },
+  "mmouse": { label: "Middle mouse", apperance: "normal" },
 };
 
 export type KeyToken = keyof typeof keyMetadata;
