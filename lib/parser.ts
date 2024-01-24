@@ -177,12 +177,18 @@ const hidKeycodes = [
 ];
 
 const realTokens = [
-  ...defaultKeymap.top.fn,
-  ...defaultKeymap.top.main,
-  ...defaultKeymap.top.thumb,
-  ...defaultKeymap.keypad.fn,
-  ...defaultKeymap.keypad.main,
-  ...defaultKeymap.keypad.thumb,
+  ...defaultKeymap.qwerty.top.fn,
+  ...defaultKeymap.qwerty.top.main,
+  ...defaultKeymap.qwerty.top.thumb,
+  ...defaultKeymap.qwerty.keypad.fn,
+  ...defaultKeymap.qwerty.keypad.main,
+  ...defaultKeymap.qwerty.keypad.thumb,
+  ...defaultKeymap.dvorak.top.fn,
+  ...defaultKeymap.dvorak.top.main,
+  ...defaultKeymap.dvorak.top.thumb,
+  ...defaultKeymap.dvorak.keypad.fn,
+  ...defaultKeymap.dvorak.keypad.main,
+  ...defaultKeymap.dvorak.keypad.thumb,
 ]
   .filter((token) => token !== "keypd" && token !== "progrm")
   .map((x) => x.toLowerCase());
@@ -195,26 +201,6 @@ const actionTokens = [
 const modifierTokens = Object.entries(keyMetadata)
   .filter((x) => x[1].apperance === "modifier")
   .map((x) => x[0]);
-
-const file = `[kp-rctrl]>[z]
-[caps]>[kptoggle]
-[g]>[a][t&h30][lwin]
-[z]>[F18]
-*[z]>[F18]
-*single macro
-{kp-escape}>{h}{e}{l}{l}{o}
-*multikey macro
-{rctrl}{s}>{g}{o}{a}{l}
-{rctrl}{lshift}{s}>{g}{o}{a}{l}
-*multikey macro with modifer not being location token
-{lwin}{pup}>{g}{o}{a}{l}
-*delay (can be 125ms or 500ms)
-{hyphen}>{f1}{d125}{d500}{mute}
-*shifted actions
-{pause}>{-Lshift}{h}{+Lshift}{i}{space}{-Rshift}{j}{+Rshift}{o}{y}{-Lshift}{1}{+Lshift}
-*changing macro speed
-{kp-tab}>{speed9}{f}{a}{s}{t}{space}{speed1}{s}{l}{o}{w}
-`;
 
 type Macro = { kind: "macro"; macroId: string; body: string };
 type Remap =
@@ -324,12 +310,12 @@ export function parseMapping(input: string) {
         .split(" ")
         .filter((x) => x.trim() !== "");
       const modifiers = fromTokens.filter((fr) =>
-        modifierTokens.find((token) => token === fr)
+        modifierTokens.find((token) => token === fr),
       );
       const locationToken = fromTokens.filter(
         (fr) =>
           realTokens.some((token) => token === fr) &&
-          !modifiers.some((token) => token === fr)
+          !modifiers.some((token) => token === fr),
       );
       if (locationToken.length !== 1) {
         errors.push({
