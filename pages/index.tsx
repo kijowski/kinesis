@@ -25,7 +25,8 @@ const kindToStyle = (kind: string) => {
 
 const FullKeyboard = ({ remaps }: { remaps: Mapping }) => {
   const [layer, setLayer] = useState<"top" | "keypad">("top");
-  const { fn, main, thumb } = defaultKeymap[layer];
+  const [mode, setMode] = useState<"qwerty" | "dvorak">("qwerty");
+  const { fn, main, thumb } = defaultKeymap[mode][layer];
   const renderKey = (item: KeyToken, idx: number) => {
     const keyToken = remaps.remaps[item] ?? { kind: "original", to: item };
     let keyStyle = "";
@@ -80,6 +81,14 @@ const FullKeyboard = ({ remaps }: { remaps: Mapping }) => {
         onClick={() => setLayer(layer === "top" ? "keypad" : "top")}
       >
         Current layer: {layer}
+      </button>
+
+      <button
+        type="button"
+        className="w-1/6 place-self-end border text-base font-medium rounded-l-md text-black hover:bg-gray-100 px-4 py-2 bg-red-100"
+        onClick={() => setMode(mode === "qwerty" ? "dvorak" : "qwerty")}
+      >
+        Current mode: {mode}
       </button>
     </div>
   );
